@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clarent-orange: #FF5E00;
+  --font-family-display: var(--font-inter-display), var(--font-inter), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+
+  p {
+    @apply text-lg font-medium;
+  }
+}
