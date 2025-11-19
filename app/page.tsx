@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Hero title="WEB & SOFTWARE DEVELOPMENT" fullHeight={true} textPosition="bottom-[10vh]" enableAutoScroll={true} />
+      <Hero title="WEB & SOFTWARE DEVELOPMENT" fullHeight={true} textPosition="bottom-[2vh]" enableAutoScroll={true} />
 
       {/* Intro Section */}
       <AutoScrollSection className="relative z-10 bg-zinc-950 min-h-screen flex items-center justify-center">
@@ -19,12 +19,11 @@ export default function Home() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
-                We build premium software at rapid speed, from simple website
+                Gold Coast based software development company, building premium software at rapid speed, from simple website
                 redesigns to complex custom systems.
               </p>
               <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
-                We aim to make all of our software fast, easy-to-use, and with unique design, to
-                generate maximum business impact.
+                We aim to make all of our software fast, easy-to-use, and affordable, with the goal of generating maximum business impact.
               </p>
             </div>
           </div>

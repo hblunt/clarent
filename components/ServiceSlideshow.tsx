@@ -9,37 +9,29 @@ const services = [
     id: 1,
     tag: 'Service 01',
     title: 'Website Development',
-    description: 'Custom website design and development tailored to your brand. From simple landing pages to complex web applications, we create fast, responsive, and visually stunning websites that drive results.'
+    price: '$2,497 AUD',
+    description: 'Custom website design and development tailored to your brand, optmised for results. We develop websites specific to your industry, business goals and bottlenecks. Design and branding services also available.'
   },
   {
     id: 2,
     tag: 'Service 02',
     title: 'Commercial App Development',
-    description: 'Build scalable commercial applications that solve real business problems. We develop cross-platform mobile and web apps with modern technologies, ensuring seamless user experiences and robust performance.'
+    price: '$3,997 AUD + equity deals available',
+    description: 'Scalable commercial web and mobile apps. Developed with design, user experience, and performance at the forefront. We are also available to assist with launch and go-to-market strategy. '
   },
   {
     id: 3,
     tag: 'Service 03',
-    title: 'Internal Enterprise Tools',
-    description: 'Streamline your business operations with custom internal tools. We create bespoke software solutions that automate workflows, manage data, and improve team productivity across your organization.'
+    title: 'Internal Tools',
+    price: '$297 AUD',
+    description: 'Optimise your business operations with custom internal software tools.'
   },
   {
     id: 4,
     tag: 'Service 04',
-    title: 'SEO Services',
-    description: 'Boost your online visibility with comprehensive SEO optimization. We implement proven strategies to improve search rankings, drive organic traffic, and help your business get found by the right audience.'
-  },
-  {
-    id: 5,
-    tag: 'Service 05',
     title: 'AI Integrations',
-    description: 'Leverage cutting-edge AI technology to enhance your products and services. From machine learning models to intelligent automation, we integrate AI solutions that provide real competitive advantages.'
-  },
-  {
-    id: 6,
-    tag: 'Service 06',
-    title: 'Enterprise Software',
-    description: 'Large-scale enterprise solutions built for performance and reliability. We develop comprehensive software systems that handle complex business logic, integrate with existing infrastructure, and scale with your growth.'
+    price: '$497 AUD',
+    description: 'Leverage AI to enhance your products and services. From simple integrations to custom machine learning models trained on your data.'
   }
 ]
 
@@ -81,7 +73,7 @@ export default function ServiceSlideshow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Column - Service Slideshow */}
-          <div className="relative min-h-[400px] flex items-center overflow-hidden">
+          <div className="relative min-h-[500px] flex items-center overflow-hidden py-8">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -121,9 +113,17 @@ export default function ServiceSlideshow() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="font-[family-name:var(--font-unifraktur)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                <h2 className="font-[family-name:var(--font-unifraktur)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
                   {services[currentIndex].title}
                 </h2>
+
+                {/* Pricing */}
+                <div className="mb-6">
+                  <p className="text-sm text-gray-400 mb-1">starting at</p>
+                  <p className="text-2xl md:text-3xl font-bold text-clarent-orange">
+                    {services[currentIndex].price}
+                  </p>
+                </div>
 
                 {/* Description */}
                 <p className="text-lg text-gray-300 leading-relaxed">

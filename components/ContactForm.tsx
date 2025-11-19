@@ -15,7 +15,6 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // TODO: Add backend integration
-    console.log('Form submitted:', formData)
   }
 
   const handleChange = (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { UnifrakturCook, Momo_Trust_Display } from 'next/font/google'
+import { UnifrakturCook } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -87,13 +87,6 @@ const unifrakturCook = UnifrakturCook({
   display: 'swap',
 })
 
-const momoTrustDisplay = Momo_Trust_Display({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-momo',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
   title: 'Clarent - Web & Software Development',
   description: 'Premium software development at rapid speed',
@@ -105,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${interDisplay.variable} ${unifrakturCook.variable} ${momoTrustDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${interDisplay.variable} ${unifrakturCook.variable}`}>
       <body className={`${inter.className} cursor-none`}>
         <CustomCursor />
         <Navbar />
