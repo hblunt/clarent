@@ -10,6 +10,8 @@ export default function ContactForm() {
     message: '',
   })
 
+  const [focusedField, setFocusedField] = useState<string | null>(null)
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // TODO: Add backend integration
@@ -25,10 +27,22 @@ export default function ContactForm() {
     })
   }
 
+  const isFieldActive = (fieldName: string) => {
+    return focusedField === fieldName || formData[fieldName as keyof typeof formData] !== ''
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-      <div className="mb-6">
-        <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
+    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-12">
+      {/* Name Field */}
+      <div className="relative">
+        <label
+          htmlFor="name"
+          className={`absolute left-0 transition-all duration-300 ease-out pointer-events-none ${
+            isFieldActive('name')
+              ? 'text-base text-gray-400 -top-6'
+              : 'text-xl text-gray-400 top-2'
+          }`}
+        >
           Name
         </label>
         <input
@@ -37,13 +51,25 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          onFocus={() => setFocusedField('name')}
+          onBlur={() => setFocusedField(null)}
           required
-          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
+          className={`w-full bg-transparent border-b-2 pb-2 pt-2 text-xl text-white outline-none transition-colors duration-300 ${
+            focusedField === 'name' ? 'border-white' : 'border-gray-600'
+          }`}
         />
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
+      {/* Email Field */}
+      <div className="relative">
+        <label
+          htmlFor="email"
+          className={`absolute left-0 transition-all duration-300 ease-out pointer-events-none ${
+            isFieldActive('email')
+              ? 'text-base text-gray-400 -top-6'
+              : 'text-xl text-gray-400 top-2'
+          }`}
+        >
           Email
         </label>
         <input
@@ -52,13 +78,25 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          onFocus={() => setFocusedField('email')}
+          onBlur={() => setFocusedField(null)}
           required
-          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
+          className={`w-full bg-transparent border-b-2 pb-2 pt-2 text-xl text-white outline-none transition-colors duration-300 ${
+            focusedField === 'email' ? 'border-white' : 'border-gray-600'
+          }`}
         />
       </div>
 
-      <div className="mb-6">
-        <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">
+      {/* Message Field */}
+      <div className="relative">
+        <label
+          htmlFor="message"
+          className={`absolute left-0 transition-all duration-300 ease-out pointer-events-none ${
+            isFieldActive('message')
+              ? 'text-base text-gray-400 -top-6'
+              : 'text-xl text-gray-400 top-2'
+          }`}
+        >
           Message
         </label>
         <textarea
@@ -66,15 +104,31 @@ export default function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
+          onFocus={() => setFocusedField('message')}
+          onBlur={() => setFocusedField(null)}
           required
           rows={6}
-          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none resize-none"
+          className={`w-full bg-transparent border-b-2 pb-2 pt-8 text-xl text-white outline-none resize-none transition-colors duration-300 ${
+            focusedField === 'message' ? 'border-white' : 'border-gray-600'
+          }`}
         />
       </div>
 
-      <Button variant="filled" className="w-full">
-        Submit
-      </Button>
+      <div className="space-y-8">
+        <Button variant="filled" className="w-full">
+          Submit
+        </Button>
+        <p className="text-center text-sm text-gray-400">
+          or email{' '}
+          <a
+            href="mailto:holly@clarent.io"
+            className="text-clarent-orange underline hover:text-yellow-400 transition-colors"
+          >
+            holly@clarent.io
+          </a>
+          {' '}directly
+        </p>
+      </div>
     </form>
   )
 }

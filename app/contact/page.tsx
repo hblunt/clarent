@@ -1,24 +1,18 @@
 import Hero from '@/components/Hero'
 import ContactForm from '@/components/ContactForm'
+import AutoScrollSection from '@/components/AutoScrollSection'
 
 export default function Contact() {
   return (
     <>
-      <Hero title="Contact" textPosition="bottom-[40vh]" />
+      <Hero title="Contact" textPosition="bottom-[40vh]" enableAutoScroll={true} />
 
       {/* Contact Form Section */}
-      <section className="relative z-10 bg-zinc-950 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <p className="text-lg text-gray-300">
-              Ready to bring your ideas to life? Fill out the form below and
-              we'll get back to you as soon as possible.
-            </p>
-          </div>
-
+      <AutoScrollSection className="relative z-10 bg-zinc-950 min-h-screen flex items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <ContactForm />
         </div>
-      </section>
+      </AutoScrollSection>
     </>
   )
 }
