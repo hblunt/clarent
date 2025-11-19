@@ -71,9 +71,9 @@ export default function ServiceSlideshow() {
   return (
     <section className="relative z-10 bg-zinc-950 min-h-screen flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center justify-items-center md:justify-items-start">
           {/* Left Column - Service Slideshow */}
-          <div className="relative min-h-[500px] flex items-center overflow-hidden py-8">
+          <div className="relative min-h-[500px] flex items-center overflow-hidden py-8 w-full max-w-2xl md:max-w-none">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -113,30 +113,37 @@ export default function ServiceSlideshow() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="font-[family-name:var(--font-unifraktur)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+                <h2 className="font-[family-name:var(--font-unifraktur)] text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4">
                   {services[currentIndex].title}
                 </h2>
 
                 {/* Pricing */}
-                <div className="mb-6">
-                  <p className="text-sm text-gray-400 mb-1">starting at</p>
-                  <p className="text-2xl md:text-3xl font-bold text-clarent-orange">
+                <div className="mb-4 md:mb-6">
+                  <p className="text-xs md:text-sm text-gray-400 mb-1">starting at</p>
+                  <p className="text-xl md:text-2xl lg:text-3xl font-bold text-clarent-orange">
                     {services[currentIndex].price}
                   </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                   {services[currentIndex].description}
                 </p>
+
+                {/* Contact Button - Mobile Only */}
+                <div className="mt-6 md:hidden">
+                  <Button href="/contact" variant="filled" className="w-full">
+                    Contact Now
+                  </Button>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Right Column - Static Description */}
-          <div>
-            <div className="max-w-xl space-y-8">
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
+          {/* Right Column - Static Description (Desktop Only) */}
+          <div className="hidden md:block">
+            <div className="max-w-xl space-y-6 md:space-y-8">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
                 We build premium software at rapid speed, from simple website
                 redesigns to complex custom systems. Whatever you can imagine, we can help you build, launch,
                 and commercialise it.

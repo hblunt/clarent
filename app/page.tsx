@@ -12,17 +12,17 @@ export default function Home() {
       {/* Intro Section */}
       <AutoScrollSection className="relative z-10 bg-zinc-950 min-h-screen flex items-center justify-center">
         <FadeInSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center space-y-12">
-            <h2 className="font-[family-name:var(--font-family-display)] text-6xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
+          <div className="max-w-5xl mx-auto text-center space-y-8 md:space-y-12">
+            <h2 className="font-[family-name:var(--font-family-display)] text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-white">
               ANYTHING,{' '}
               <span className="text-clarent-orange">FAST.</span>
             </h2>
-            <div className="max-w-3xl mx-auto space-y-6">
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
+            <div className="max-w-3xl mx-auto space-y-4 md:space-y-6">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
                 Gold Coast based software development company, building premium software at rapid speed, from simple website
                 redesigns to complex custom systems.
               </p>
-              <p className="text-xl md:text-2xl leading-relaxed text-gray-300">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
                 We aim to make all of our software fast, easy-to-use, and affordable, with the goal of generating maximum business impact.
               </p>
             </div>
@@ -35,18 +35,18 @@ export default function Home() {
         <FadeInSection className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid md:grid-cols-2 gap-16 mb-12">
             {/* Left Column - Development Services */}
-            <div className="space-y-6">
-              <p className="text-sm text-gray-400 uppercase tracking-wider">What We Do - 01</p>
-              <h2 className="font-[family-name:var(--font-unifraktur)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-xs md:text-sm text-gray-400 uppercase tracking-wider">What We Do - 01</p>
+              <h2 className="font-[family-name:var(--font-unifraktur)] text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 Development Services
               </h2>
-              <div className="space-y-6">
-                <p className="text-lg text-gray-300 leading-relaxed">
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                   Website development, custom tools, commercial apps, whatever you can
                   imagine, we'll help build it. SEO and marketing services also
                   available.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                   Whatever you can imagine, we can help you build, launch,
                   and commercialise it.
                 </p>
@@ -57,12 +57,12 @@ export default function Home() {
             </div>
 
             {/* Right Column - Internal Projects */}
-            <div className="space-y-6">
-              <p className="text-sm text-gray-400 uppercase tracking-wider">What We Do - 02</p>
-              <h2 className="font-[family-name:var(--font-unifraktur)] text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-xs md:text-sm text-gray-400 uppercase tracking-wider">What We Do - 02</p>
+              <h2 className="font-[family-name:var(--font-unifraktur)] text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
                 Internal Projects
               </h2>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 Take a look at the products our team has built, or is currently
                 building.
               </p>

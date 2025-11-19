@@ -20,7 +20,7 @@ export default function Projects() {
       {/* Projects Section */}
       <AutoScrollSection className="relative z-10 bg-zinc-950 min-h-screen flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-3xl md:text-4xl text-gray-300 text-center">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-gray-300 text-center">
             In-house projects will be visible here soon.
           </p>
         </div>

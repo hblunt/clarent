@@ -69,8 +69,8 @@ export default function Hero({ title, fullHeight = false, textPosition = 'bottom
   return (
     <section ref={heroRef} className={`relative bg-black text-white ${fullHeight ? 'h-screen' : 'h-[60vh]'}`}>
       <VantaBackground />
-      <div className={`fixed ${textPosition} left-[2vw] z-10 max-w-[45vw]`}>
-        <h1 className="font-display text-[8vw] md:text-[6vw] font-bold leading-tight">
+      <div className={`fixed ${textPosition} left-[2vw] z-10 max-w-[90vw] md:max-w-[45vw]`}>
+        <h1 className="font-display text-[9vw] md:text-[6vw] lg:text-[5vw] font-bold leading-tight">
           {title}
           <span className="text-clarent-orange">*</span>
         </h1>
