@@ -19,12 +19,12 @@ export default function PricingCard({
     <div
       className={`rounded-lg p-8 ${
         featured
-          ? 'bg-black text-white border-2 border-clarent-orange scale-105'
-          : 'bg-white text-black border border-gray-200'
+          ? 'bg-zinc-950 text-white border-2 border-clarent-orange scale-105'
+          : 'bg-zinc-900 text-white border border-zinc-800'
       }`}
     >
       <h3 className="text-xl font-bold mb-2">{tier}</h3>
-      <p className={`text-sm mb-4 ${featured ? 'text-gray-300' : 'text-gray-600'}`}>
+      <p className={`text-sm mb-4 ${featured ? 'text-gray-300' : 'text-gray-400'}`}>
         {description}
       </p>
       <p className="text-4xl font-bold mb-6">

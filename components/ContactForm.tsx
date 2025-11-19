@@ -28,7 +28,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
       <div className="mb-6">
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+        <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
           Name
         </label>
         <input
@@ -38,12 +38,12 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
+          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
         />
       </div>
 
       <div className="mb-6">
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+        <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
           Email
         </label>
         <input
@@ -53,12 +53,12 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
+          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none"
         />
       </div>
 
       <div className="mb-6">
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">
           Message
         </label>
         <textarea
@@ -68,7 +68,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none resize-none"
+          className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 text-white rounded-lg focus:ring-2 focus:ring-clarent-orange focus:border-transparent outline-none resize-none"
         />
       </div>
 

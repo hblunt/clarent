@@ -3,6 +3,8 @@
 @theme {
   --color-clarent-orange: #FF5E00;
   --font-family-display: var(--font-inter-display), var(--font-inter), system-ui, sans-serif;
+  --font-family-logo: var(--font-unifraktur), serif;
+  --font-family-body: var(--font-momo), system-ui, sans-serif;
 }
 
 @layer base {
@@ -11,10 +13,19 @@
   }
 
   body {
-    @apply bg-white text-black;
+    @apply bg-black text-white;
   }
 
   p {
-    @apply text-lg font-medium;
+    @apply text-lg font-medium font-[family-name:var(--font-family-display)];
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[family-name:var(--font-family-display)];
+  }
+
+  /* Hide cursor on all interactive elements */
+  a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
   }
 }
